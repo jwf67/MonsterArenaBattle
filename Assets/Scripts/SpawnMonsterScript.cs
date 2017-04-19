@@ -8,6 +8,9 @@ public class SpawnMonsterScript : NetworkBehaviour {
     //Number of monsters
     public const int NUM_MONSTERS = 30;
 
+    //make the new monster
+    public Monster thisMonster;
+
     //List of all RigidBodies
     //public Rigidbody[] rigidbodies = new Rigidbody[NUM_MONSTERS];
     public Rigidbody monster;
@@ -83,5 +86,46 @@ public class SpawnMonsterScript : NetworkBehaviour {
         Debug.Log(monster);
 
         return monster;
+    }
+}
+
+public class Monster
+{
+    //Properties of a Monster
+    String name;
+    int attack;
+    int defense;
+    int hp;
+    int currHP;
+    int number;
+
+    public Monster(String name, int attack, int defense, int hp, int number)
+    {
+        this.name = name;
+        this.attack = attack;
+        this.defense = defense;
+        this.hp = hp;
+        currHP = hp;
+        this.number = number;
+    }
+}
+
+public class AccessMonsters
+{
+    Monster[] monsters = new Monster[5];
+
+    Monster a = new Monster("", 5, 5, 5, 1);
+    Monster b = new Monster("", 7, 7, 7, 2);
+    Monster c = new Monster("", 9, 9, 9, 3);
+    Monster d = new Monster("", 1, 1, 1, 4);
+    Monster e = new Monster("", 5, 3, 9, 5);
+
+    public void AddMonster()
+    {
+        monsters[0] = a;
+        monsters[1] = b;
+        monsters[2] = c;
+        monsters[3] = d;
+        monsters[4] = e;
     }
 }
