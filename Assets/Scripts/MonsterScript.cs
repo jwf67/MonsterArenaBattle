@@ -5,8 +5,8 @@ using System;
 public class MonsterScript : MonoBehaviour {
 
     //each monster is identified by its index and its monster value
-    private Monster m;
-    public int index;
+    private static Monster m;
+    public int index = m.getNumber();
 
 	// Use this for initialization
 	void Start () {

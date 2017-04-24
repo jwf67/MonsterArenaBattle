@@ -19,6 +19,67 @@ public class Monster
         currHP = hp;
         this.number = number;
     }
+
+    //getters and setters
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setAttack(int attack)
+    {
+        this.attack = attack;
+    }
+
+    public void setDefense(int defense)
+    {
+        this.defense = defense;
+    }
+
+    public void setHP(int hp)
+    {
+        this.hp = hp;
+    }
+
+    public void setCurrHP(int currHP)
+    {
+        this.currHP = currHP;
+    }
+
+    public void setNumber(int number)
+    {
+        this.number = number;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public int getAttack()
+    {
+        return attack;
+    }
+
+    public int getDefense()
+    {
+        return defense;
+    }
+
+    public int getHP()
+    {
+        return hp;
+    }
+
+    public int getCurrHP()
+    {
+        return currHP;
+    }
+
+    public int getNumber()
+    {
+        return number;
+    }
 }
 
 public class AccessMonsters
